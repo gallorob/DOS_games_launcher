@@ -1,4 +1,4 @@
-# DOS_games_launcher
+# DOS games launcher
 
 A DOSBox front-end to manage games (and software, eventually) written in C++.
 

@@ -3,8 +3,7 @@
 #include <QString>
 
 
-class DOSApplication
-{
+class DOSApplication {
 public:
     DOSApplication();
     DOSApplication(QString line);
@@ -17,8 +16,11 @@ public:
     QString boxart;
     QString conf = "/home/pi/DOS Games/default.conf";
     int playtime= 0;
-    QString completed = "NO";
+    QString completed;
     QString extras = "";
+
+    QString gettime() const;
+    void updateplaytime(int time);
 };
 
 #endif // DOSAPPLICATION_H

@@ -17,3 +17,12 @@ DOSApplication::DOSApplication(QString line) {
     completed = parsed.at(9);
     extras = parsed.at(10);
 }
+
+// return play time in format h:m:s
+QString DOSApplication::gettime() const {
+    return QString::number(playtime/3600) + ':' + QString::number(playtime/60 % 60) +  + ':' + QString::number(playtime % 60);
+}
+
+void DOSApplication::updateplaytime(int time) {
+    this->playtime += time;
+}

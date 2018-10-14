@@ -28,6 +28,17 @@ private slots:
 
     void on_defaultdos_button_clicked();
 
+    void on_manual_button_clicked();
+
+    void refreshGamesList();
+
+    void sort_year();
+    void sort_title();
+    void sort_dev();
+    void sort_pub();
+
+    void on_onlycompleted_box_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

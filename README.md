@@ -10,3 +10,5 @@ The csv file follows this structure:
 Current version screenshot:
 
 ![screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/dosgamesmanagerv01a.jpg)
+
+![screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/addgamewindow_v01.jpg)

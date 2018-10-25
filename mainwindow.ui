@@ -184,7 +184,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QCheckBox" name="onlycompleted_box">
+   <widget class="QCheckBox" name="hidecompleted_box">
     <property name="geometry">
      <rect>
       <x>410</x>

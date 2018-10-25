@@ -6,38 +6,235 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>443</width>
+    <height>347</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Add game</string>
   </property>
-  <widget class="QPushButton" name="gamepathbutton">
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>dosgamesicon.ico</normaloff>dosgamesicon.ico</iconset>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>30</y>
-     <width>101</width>
-     <height>31</height>
+     <x>10</x>
+     <y>0</y>
+     <width>421</width>
+     <height>331</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Game Path</string>
+   <property name="title">
+    <string>Game details:</string>
    </property>
-  </widget>
-  <widget class="QLineEdit" name="gameloc">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>70</y>
-     <width>221</width>
-     <height>33</height>
-    </rect>
-   </property>
+   <widget class="QPushButton" name="manual_button">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>260</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Browse manual file</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="year">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>181</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Enter game year...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="developer">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>181</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Enter game's developer</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="publisher">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>181</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Enter game's publisher</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="genre">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>181</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Enter game's genre (;)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="conf_path">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>251</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="boxart_path">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>251</width>
+      <height>33</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="manual_path">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>251</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Optional</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="extras_path">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>251</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Optional</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="conf_button">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>200</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Browse Config file</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boxart_button">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>230</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Browse boxart</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="extras_button">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>290</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Browse extras folder</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="title">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>181</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Enter game's title...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_game_button">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>70</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ADD GAME</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

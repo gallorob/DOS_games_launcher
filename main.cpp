@@ -17,8 +17,8 @@ int main(int argc, char *argv[]) {
     QVector<DOSApplication> gamesdata;
     getgamesdata(gamesdata);
     QApplication a(argc, argv);
-    MainWindow w(gamesdata);
-    w.show();
+    MainWindow mainwindow(gamesdata);
+    mainwindow.show();
 
     return a.exec();
 }

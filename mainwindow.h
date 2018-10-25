@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QModelIndex>
 #include <dosapplication.h>
+#include <addgamewindow.h>
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +23,8 @@ private slots:
 
     void on_add_game_button_clicked();
 
+    void getNewGame(DOSApplication newgame);
+
     void on_games_list_itemSelectionChanged();
 
     void on_extras_button_clicked();
@@ -30,14 +33,15 @@ private slots:
 
     void on_manual_button_clicked();
 
-    void refreshGamesList();
+    void refreshGamesList(bool hideCompleted = false);
 
     void sort_year();
     void sort_title();
     void sort_dev();
     void sort_pub();
+    void sort_playtime();
 
-    void on_onlycompleted_box_clicked();
+    void on_hidecompleted_box_clicked();
 
 private:
     Ui::MainWindow *ui;

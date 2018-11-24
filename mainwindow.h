@@ -35,6 +35,8 @@ private slots:
 
     void refreshGamesList(bool hideCompleted = false);
 
+    void dumpData();
+
     void sort_year();
     void sort_title();
     void sort_dev();
@@ -42,6 +44,8 @@ private slots:
     void sort_playtime();
 
     void on_hidecompleted_box_clicked();
+
+    void on_del_game_button_clicked();
 
 private:
     Ui::MainWindow *ui;

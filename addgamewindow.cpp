@@ -3,20 +3,18 @@
 #include <QFileDialog>
 #include <globalvars.h>
 #include <dosapplication.h>
+#include <configeditor.h>
 
 DOSApplication newgame;
 
 AddGameWindow::AddGameWindow(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::AddGameWindow)
-{
+    ui(new Ui::AddGameWindow) {
     ui->setupUi(this);
     this->setWindowIcon(QIcon(iconlocation));
-
 }
 
-AddGameWindow::~AddGameWindow()
-{
+AddGameWindow::~AddGameWindow() {
     delete ui;
 }
 
@@ -65,3 +63,12 @@ void AddGameWindow::on_add_game_button_clicked() {
     }
 }
 
+
+void AddGameWindow::on_cancel_button_clicked() {
+    AddGameWindow::close();
+}
+
+void AddGameWindow::on_create_config_button_clicked() {
+    ConfigEditor ce;
+    ce.exec();
+}

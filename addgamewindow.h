@@ -31,6 +31,10 @@ private slots:
 
     void on_add_game_button_clicked();
 
+    void on_cancel_button_clicked();
+
+    void on_create_config_button_clicked();
+
 private:
     Ui::AddGameWindow *ui;
 };

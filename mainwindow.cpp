@@ -79,6 +79,7 @@ void MainWindow::on_play_button_clicked() {
     //get playtime and update game info
     playtime -= (std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch())).count();
     displayed[ui->games_list->currentIndex().row()]->updateplaytime(-playtime);
+    dumpData();
     MainWindow::show();
 }
 
@@ -95,6 +96,10 @@ void MainWindow::on_add_game_button_clicked() {
 void MainWindow::getNewGame(DOSApplication newgame) {
     games.push_back(newgame);
     refreshGamesList(ui->hidecompleted_box->isChecked());
+    dumpData();
+}
+
+void MainWindow::dumpData() {
     //dump data to file
     QFile outputFile(gamedatalocation);
     if(outputFile.open(QIODevice::WriteOnly)) {
@@ -191,4 +196,10 @@ void MainWindow::refreshGamesList(bool hidecompleted) {
 
 void MainWindow::on_hidecompleted_box_clicked() {
     refreshGamesList(ui->hidecompleted_box->isChecked());
+}
+
+void MainWindow::on_del_game_button_clicked() {
+    games.remove(ui->games_list->currentIndex().row());
+    refreshGamesList(ui->hidecompleted_box->isChecked());
+    dumpData();
 }

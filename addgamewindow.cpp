@@ -19,9 +19,12 @@ AddGameWindow::~AddGameWindow() {
 }
 
 void AddGameWindow::on_conf_button_clicked() {
-    //todo: change to editable file
     QString conf_file_path = QFileDialog::getOpenFileName(this, tr("Select config file"), QDir::currentPath(), tr("Text files (*.conf)"));
-    ui->conf_path->setText(conf_file_path);
+    setConfFilePath(conf_file_path);
+}
+
+void AddGameWindow::setConfFilePath(QString filename) {
+    ui->conf_path->setText(filename);
 }
 
 void AddGameWindow::on_boxart_button_clicked() {
@@ -58,8 +61,6 @@ void AddGameWindow::on_add_game_button_clicked() {
                                   ui->extras_path->text());
         emit newGame(newgame);
         AddGameWindow::close();
-    } else {
-        //do nothing
     }
 }
 
@@ -70,5 +71,6 @@ void AddGameWindow::on_cancel_button_clicked() {
 
 void AddGameWindow::on_create_config_button_clicked() {
     ConfigEditor ce;
+    connect(&ce, SIGNAL(newConfigFile(QString)), this, SLOT(setConfFilePath(QString)));
     ce.exec();
 }

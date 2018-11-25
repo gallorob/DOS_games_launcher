@@ -8,6 +8,7 @@ class ConfigFile
 {
 public:
     ConfigFile();
+    QString getFileConfiguration();
     void dumpToFile(QString filename); // todo: implement
 
     // variables for config file (default values)
@@ -59,6 +60,39 @@ public:
     QString oplmode = "auto";
     QString oplemu = "default";
     uint oplrate = 44100;
+    // gus
+    bool gus = false;
+    uint gusrate = 44100;
+    uint gusbase = 240;
+    uint gusirq = 5;
+    uint gusdma = 3;
+    QString ultradir = "C:\\ULTRASND";
+    // speaker
+    bool pcspeaker = true;
+    uint pcrate = 44100;
+    QString tandy = "auto";
+    uint tandyrate = 44100;
+    bool disney = true;
+    // joystick
+    QString joysticktype = "auto";
+    bool timed = true;
+    bool autofire = false;
+    bool swap34 = false;
+    bool buttonwrap = false;
+    // serial
+    QString serial1 = "dummy";
+    QString serial2 = "dummy";
+    QString serial3 = "disabled";
+    QString serial4 = "disabled";
+    // dos
+    bool xms = true;
+    bool ems = true;
+    bool umb = true;
+    QString keyboardlayout = "auto";
+    // ipx
+    bool ipx = false;
+    // autoexec
+    QString autoexec = "cls";
 };
 
 #endif // CONFIGFILE_H

@@ -23,6 +23,8 @@ private slots:
 
     void on_conf_button_clicked();
 
+    void setConfFilePath(QString filename);
+
     void on_boxart_button_clicked();
 
     void on_manual_button_clicked();

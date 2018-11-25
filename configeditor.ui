@@ -7,11 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>520</width>
-    <height>380</height>
+    <height>383</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Config file creator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>dosgamesicon.ico</normaloff>dosgamesicon.ico</iconset>
   </property>
   <widget class="QPushButton" name="save_button">
    <property name="geometry">
@@ -49,7 +53,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>6</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab_1">
     <attribute name="title">
@@ -208,6 +212,9 @@
       <property name="text">
        <string>Autolock mouse</string>
       </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QLineEdit" name="sensitivity">
       <property name="geometry">
@@ -253,6 +260,9 @@
       <property name="text">
        <string>Wait on error</string>
       </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QLabel" name="label_5">
       <property name="geometry">
@@ -278,6 +288,9 @@
       </property>
       <property name="text">
        <string>Use scan codes</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QComboBox" name="priority_1">
@@ -401,6 +414,9 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="currentIndex">
+       <number>6</number>
+      </property>
       <item>
        <property name="text">
         <string>hercules</string>
@@ -485,7 +501,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>128</string>
+       <string>16</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -494,11 +510,6 @@
        <string/>
       </property>
      </widget>
-     <zorder>label_6</zorder>
-     <zorder>machine</zorder>
-     <zorder>label_7</zorder>
-     <zorder>memsize</zorder>
-     <zorder>tabs_settings</zorder>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_3">
@@ -953,6 +964,9 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
       <item>
        <property name="text">
         <string>22050</string>
@@ -1017,7 +1031,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>10</string>
+       <string>20</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1047,6 +1061,9 @@
         <width>85</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
       </property>
       <item>
        <property name="text">
@@ -1217,7 +1234,7 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>421</width>
+       <width>491</width>
        <height>131</height>
       </rect>
      </property>
@@ -1227,11 +1244,14 @@
      <widget class="QComboBox" name="sbtype">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>90</x>
         <y>20</y>
         <width>85</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="currentIndex">
+       <number>4</number>
       </property>
       <item>
        <property name="text">
@@ -1274,7 +1294,7 @@
        <rect>
         <x>0</x>
         <y>20</y>
-        <width>111</width>
+        <width>41</width>
         <height>21</height>
        </rect>
       </property>
@@ -1285,7 +1305,7 @@
      <widget class="QComboBox" name="sbbase">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>90</x>
         <y>40</y>
         <width>85</width>
         <height>21</height>
@@ -1337,7 +1357,7 @@
        <rect>
         <x>0</x>
         <y>40</y>
-        <width>111</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>
@@ -1348,7 +1368,7 @@
      <widget class="QComboBox" name="irq">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>90</x>
         <y>60</y>
         <width>85</width>
         <height>21</height>
@@ -1395,7 +1415,7 @@
        <rect>
         <x>0</x>
         <y>60</y>
-        <width>111</width>
+        <width>31</width>
         <height>21</height>
        </rect>
       </property>
@@ -1406,7 +1426,7 @@
      <widget class="QComboBox" name="dma">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>90</x>
         <y>80</y>
         <width>85</width>
         <height>21</height>
@@ -1448,7 +1468,7 @@
        <rect>
         <x>0</x>
         <y>80</y>
-        <width>111</width>
+        <width>41</width>
         <height>21</height>
        </rect>
       </property>
@@ -1459,11 +1479,14 @@
      <widget class="QComboBox" name="hdma">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>90</x>
         <y>100</y>
         <width>85</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
       </property>
       <item>
        <property name="text">
@@ -1501,7 +1524,7 @@
        <rect>
         <x>0</x>
         <y>100</y>
-        <width>111</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>
@@ -1512,7 +1535,7 @@
      <widget class="QComboBox" name="oplmode">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>390</x>
         <y>40</y>
         <width>85</width>
         <height>21</height>
@@ -1552,9 +1575,9 @@
      <widget class="QLabel" name="label_25">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>280</x>
         <y>40</y>
-        <width>111</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>
@@ -1565,7 +1588,7 @@
      <widget class="QComboBox" name="oplemu">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>390</x>
         <y>60</y>
         <width>85</width>
         <height>21</height>
@@ -1595,7 +1618,7 @@
      <widget class="QLabel" name="label_26">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>280</x>
         <y>60</y>
         <width>111</width>
         <height>21</height>
@@ -1608,7 +1631,7 @@
      <widget class="QComboBox" name="oplrate">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>390</x>
         <y>80</y>
         <width>85</width>
         <height>21</height>
@@ -1658,9 +1681,9 @@
      <widget class="QLabel" name="label_27">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>280</x>
         <y>80</y>
-        <width>111</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1671,8 +1694,8 @@
      <widget class="QCheckBox" name="sbmixer">
       <property name="geometry">
        <rect>
-        <x>220</x>
-        <y>20</y>
+        <x>280</x>
+        <y>10</y>
         <width>111</width>
         <height>26</height>
        </rect>
@@ -1685,6 +1708,1058 @@
       </property>
       <property name="tristate">
        <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_8">
+    <attribute name="title">
+     <string>Gravis Ultrasound</string>
+    </attribute>
+    <widget class="QGroupBox" name="gus_Settings">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>291</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Gravis Ultrasound Settings:</string>
+     </property>
+     <widget class="QCheckBox" name="gus">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>281</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable Gravis Ultrasound emulation</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sample rate:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>IO Address:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>IRQ:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DMA:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>120</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Path:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ultradir">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>120</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="gusrate">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>40</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>44100</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>48000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>32000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>22050</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11025</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>49716</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="gusbase">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>60</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>240</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>220</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>260</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>280</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2a0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2c0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2e0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>300</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="gusirq">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>80</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="gusdma">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>100</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_9">
+    <attribute name="title">
+     <string>Speaker</string>
+    </attribute>
+    <widget class="QGroupBox" name="Speaker_Settings">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>311</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Speaker settings:</string>
+     </property>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PC-Speaker rate:</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pcspeaker">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>241</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable PC-Speaker emulation</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="pcrate">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>40</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>44100</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>48000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>32000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>22050</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11025</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>49716</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="tandy">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>60</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>auto</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>on</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>off</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tandy Sound System:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="tandyrate">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>80</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>44100</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>48000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>32000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>22050</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11025</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8000</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>49716</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_35">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tandy sample rate:</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="disney">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>311</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable Disney Sound Source emulation</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_10">
+    <attribute name="title">
+     <string>Joystick</string>
+    </attribute>
+    <widget class="QGroupBox" name="Joystick_Settings">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>191</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Joystick settings:</string>
+     </property>
+     <widget class="QComboBox" name="joysticktype">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>20</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>auto</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2axis</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4axis</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4axis_2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>fcs</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>none</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QCheckBox" name="timed">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>141</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Timed intervals</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_36">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Type:</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="autofire">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>91</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Autofire</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="swap34">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>191</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Swap 3rd and 4th axis</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="buttonwrap">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>151</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Button wrapping</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_11">
+    <attribute name="title">
+     <string>Serial</string>
+    </attribute>
+    <widget class="QGroupBox" name="Serial_Settings">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>371</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Serial connections settings:</string>
+     </property>
+     <widget class="QComboBox" name="serial1">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>20</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>dummy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>disabled</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>modem</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>nullmodem</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>directserial</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_37">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Serial #1:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="serial2">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>40</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>dummy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>disabled</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>modem</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>nullmodem</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>directserial</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_38">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Serial #2:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_39">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Serial #3:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_40">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Serial #4:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="parameter1">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>20</y>
+        <width>181</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>No possible extra parameters for this option</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="parameter2">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>40</y>
+        <width>181</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>No possible extra parameters for this option</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="parameter3">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>60</y>
+        <width>181</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>No possible extra parameters for this option</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="parameter4">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>80</y>
+        <width>181</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>No possible extra parameters for this option</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="serial3">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>60</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>dummy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>disabled</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>modem</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>nullmodem</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>directserial</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="serial4">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>80</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>dummy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>disabled</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>modem</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>nullmodem</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>directserial</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_12">
+    <attribute name="title">
+     <string>DOS</string>
+    </attribute>
+    <widget class="QGroupBox" name="DOS_IPX_Settings">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>401</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>DOS / IPX settings:</string>
+     </property>
+     <widget class="QCheckBox" name="xms">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>121</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>XMS support</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ems">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>121</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>EMS support</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="umb">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>121</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>UMB support</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_41">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Keyboard layout:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="keyboardlayout">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>80</y>
+        <width>85</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>auto</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>none</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>(specify...)</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="kb_val">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>80</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>No possible extra parameters for this option</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ipx">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>20</y>
+        <width>111</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable IPX</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>

@@ -13,4 +13,4 @@ Current version screenshot:
 
 ![screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/addgamewindow_v02.jpg)
 
-![screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/configfilecreator_v01.jpg)
+![screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/configfilecreator_v02.jpg)

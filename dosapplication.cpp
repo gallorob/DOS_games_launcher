@@ -3,33 +3,52 @@
 
 DOSApplication::DOSApplication() {}
 
-DOSApplication::DOSApplication(QString line) {
-    QStringList parsed = line.remove("\"").split(";");
-    title = parsed.at(0);
-    year = parsed.at(1).toInt();
-    developer = parsed.at(2);
-    publisher = parsed.at(3);
-    genre = parsed.at(4);
-    manual = parsed.at(5);
-    boxart = parsed.at(6);
-    conf = parsed.at(7);
-    playtime = parsed.at(8).toInt();
-    completed = parsed.at(9) != "0";
-    extras = parsed.at(10);
-}
-
-DOSApplication::DOSApplication(QString title, int year, QString developer, QString publisher, QString genre, QString manual, QString boxart, QString conf, QString extras) {
+DOSApplication::DOSApplication(QString title,
+                               int year,
+                               QString developer,
+                               QString publisher,
+                               QStringList genres,
+                               QString manual,
+                               QString boxart,
+                               QStringList themes,
+                               QString conf,
+                               QString extras) {
     this->title = title;
     this->year = year;
     this->developer = developer;
     this->publisher = publisher;
-    this->genre = genre;
+    this->genres = genres;
     this->manual = manual;
     this->boxart = boxart;
+    this->themes = themes;
     this->conf = conf;
     this->playtime = 0;
     this->completed = false;
     this->extras = extras;
+}
+
+QString DOSApplication::getGenres() const {
+    if(this->genres.size() == 0) return "";
+
+    QString t = "";
+    for (int i = 0; i < this->genres.length() - 1; i++) {
+        t.append(this->genres[i]);
+        t.append(", ");
+    }
+    t.append(this->genres[this->genres.length() - 1]);
+    return t;
+}
+
+QString DOSApplication::getThemes() const {
+    if(this->themes.size() == 0) return "";
+
+    QString t = "";
+    for (int i = 0; i < this->themes.length() - 1; i++) {
+        t.append(this->themes[i]);
+        t.append(", ");
+    }
+    t.append(this->themes[this->themes.length() - 1]);
+    return t;
 }
 
 // return play time in format h:m:s
@@ -41,17 +60,16 @@ void DOSApplication::updateplaytime(int time) {
     this->playtime += time;
 }
 
-QString DOSApplication::printable() {
-    QString line = "\"" + this->title + "\";\"" +
-            QString::number(this->year) + "\";\"" +
-            this->developer + "\";\"" +
-            this->publisher + "\";\"" +
-            this->genre + "\";\"" +
-            this->manual + "\";\"" +
-            this->boxart + "\";\"" +
-            this->conf + "\";\"" +
-            QString::number(this->playtime) + "\";\"" +
-            (this->completed ? "1" : "0") + "\";\"" +
-            this->extras + "\"\n";
-    return line;
+bool DOSApplication::hasTheme(QString theme) const {
+    for (QString t : this->themes) {
+        if (theme.compare(t) == 0) return true;
+    }
+    return false;
+}
+
+bool DOSApplication::hasGenre(QString genre) const {
+    for (QString g : this->genres) {
+        if (genre.compare(g) == 0) return true;
+    }
+    return false;
 }

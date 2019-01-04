@@ -1,6 +1,7 @@
 #include "configeditor.h"
 #include "ui_configeditor.h"
 #include "configfile.h"
+#include "globalvars.h"
 #include <QLineEdit>
 #include <QFileDialog>
 #include <QDir>
@@ -9,6 +10,7 @@ ConfigEditor::ConfigEditor(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ConfigEditor) {
     ui->setupUi(this);
+    this->setWindowIcon(QIcon(iconlocation));
 }
 
 ConfigEditor::~ConfigEditor() {
@@ -20,11 +22,7 @@ void ConfigEditor::on_cancel_button_clicked() {
 }
 
 void ConfigEditor::on_cycles_currentIndexChanged(const QString &arg1) {
-    if (arg1 == "fixed") {
-        ui->cycles_number->setEnabled(true);
-    } else {
-        ui->cycles_number->setEnabled(false);
-    }
+    ui->cycles_number->setEnabled(arg1.compare(QString("fixed")) == 0);
 }
 
 void ConfigEditor::updateSerialParameters(QString arg1, QLineEdit* parameter) {
@@ -83,7 +81,8 @@ void ConfigEditor::setVariablesToConfigFile(ConfigFile *cf) {
     cf->autolock = ui->autolock->isChecked();
     cf->sensitivity = ui->sensitivity->text().toUInt();
     cf->waitonerror = ui->waitonerror->isChecked();
-    cf->priority = {ui->priority_1->currentText(), ui->priority_2->currentText()};
+    cf->priority.push_back(ui->priority_1->currentText());
+    cf->priority.push_back(ui->priority_2->currentText());
     cf->usescancodes = ui->usescancodes->isChecked();
     // dosbox
     cf->machine = ui->machine->currentText();
@@ -95,11 +94,8 @@ void ConfigEditor::setVariablesToConfigFile(ConfigFile *cf) {
     // cpu
     cf->core = ui->core->currentText();
     cf->cputype = ui->type->currentText();
-    if (ui->type->currentText() != "fixed") {
-        cf->cycles = ui->cycles->currentText();
-    } else {
-        cf->fixed_cycles = ui->cycles_number->text().toUInt();
-    }
+    cf->cycles = ui->cycles->currentText();
+    if (ui->cycles->currentText().compare(QString("fixed")) == 0) cf->fixed_cycles = ui->cycles_number->text().toUInt();
     cf->cycleup = ui->cycleup->text().toUInt();
     cf->cycledown = ui->cycledown->text().toUInt();
     // mixer
@@ -145,22 +141,22 @@ void ConfigEditor::setVariablesToConfigFile(ConfigFile *cf) {
     if ((ui->serial1->currentText() == "dummy") | (ui->serial1->currentText() == "disabled")) {
         cf->serial1 = ui->serial1->currentText();
     } else {
-        cf->serial1 = ui->serial1->currentText() + QString::fromAscii(" ") + ui->parameter1->text();
+        cf->serial1 = ui->serial1->currentText() + " " + ui->parameter1->text();
     }
     if ((ui->serial2->currentText() == "dummy") | (ui->serial2->currentText() == "disabled")) {
         cf->serial2 = ui->serial2->currentText();
     } else {
-        cf->serial2 = ui->serial2->currentText() + QString::fromAscii(" ") + ui->parameter2->text();
+        cf->serial2 = ui->serial2->currentText() + " " + ui->parameter2->text();
     }
     if ((ui->serial3->currentText() == "dummy") | (ui->serial3->currentText() == "disabled")) {
         cf->serial3 = ui->serial3->currentText();
     } else {
-        cf->serial3 = ui->serial3->currentText() + QString::fromAscii(" ") + ui->parameter3->text();
+        cf->serial3 = ui->serial3->currentText() + " " + ui->parameter3->text();
     }
     if ((ui->serial4->currentText() == "dummy") | (ui->serial4->currentText() == "disabled")) {
         cf->serial4 = ui->serial4->currentText();
     } else {
-        cf->serial4 = ui->serial4->currentText() + QString::fromAscii(" ") + ui->parameter4->text();
+        cf->serial4 = ui->serial4->currentText() + " " + ui->parameter4->text();
     }
     // dos
     cf->xms = ui->xms->isChecked();

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>443</width>
-    <height>386</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,17 +29,20 @@
    <property name="title">
     <string>Game details:</string>
    </property>
-   <widget class="QPushButton" name="manual_button">
+   <widget class="QLineEdit" name="title">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>260</y>
-      <width>151</width>
-      <height>31</height>
+      <x>10</x>
+      <y>30</y>
+      <width>391</width>
+      <height>33</height>
      </rect>
     </property>
     <property name="text">
-     <string>Browse manual file</string>
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Enter game's title...</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="year">
@@ -106,114 +109,14 @@
      <string/>
     </property>
     <property name="placeholderText">
-     <string>Enter game's genre (;)</string>
+     <string>Enter game's genre</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="conf_path">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
+   <widget class="QLineEdit" name="themes">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>200</y>
-      <width>251</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="boxart_path">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>230</y>
-      <width>251</width>
-      <height>33</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="manual_path">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>260</y>
-      <width>251</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <property name="placeholderText">
-     <string>Optional</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="extras_path">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>290</y>
-      <width>251</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <property name="placeholderText">
-     <string>Optional</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="conf_button">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>200</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Browse Config file</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="boxart_button">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>230</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Browse boxart</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="extras_button">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>290</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Browse extras folder</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="title">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>30</y>
+      <y>180</y>
       <width>391</width>
       <height>33</height>
      </rect>
@@ -222,7 +125,7 @@
      <string/>
     </property>
     <property name="placeholderText">
-     <string>Enter game's title...</string>
+     <string>Enter game's themes (,)</string>
     </property>
    </widget>
   </widget>
@@ -230,7 +133,7 @@
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>340</y>
+     <y>360</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -243,7 +146,7 @@
    <property name="geometry">
     <rect>
      <x>320</x>
-     <y>340</y>
+     <y>360</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -256,13 +159,126 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>340</y>
+     <y>360</y>
      <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string>Create Config file</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="manual_button">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>280</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Browse manual file</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="extras_path">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>310</y>
+     <width>251</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Optional</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="manual_path">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>280</y>
+     <width>251</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Optional</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="conf_button">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>220</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Browse Config file</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="boxart_path">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>251</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="conf_path">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>220</y>
+     <width>251</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="extras_button">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>310</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Browse extras folder</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="boxart_button">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>250</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Browse boxart</string>
    </property>
   </widget>
  </widget>

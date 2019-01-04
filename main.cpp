@@ -1,9 +1,12 @@
 #include "mainwindow.h"
+
 #include <QApplication>
 #include <dosapplication.h>
 #include <QFile>
+#include <QDir>
 #include <QTextStream>
 #include <globalvars.h>
+#include <dbmanager.h>
 
 /**
  * main program
@@ -14,23 +17,19 @@
 void getgamesdata(QVector<DOSApplication>& data);
 
 int main(int argc, char *argv[]) {
-    QVector<DOSApplication> gamesdata;
-    getgamesdata(gamesdata);
+    DBManager dbm(dblocation);
+    QVector<DOSApplication> gamesdata = dbm.getDOSApplications();
+
+    genres = dbm.getGenres();
+    std::stable_sort(genres.begin(), genres.end());
+
+    themes = dbm.getThemes();
+    std::stable_sort(themes.begin(), themes.end());
+
+    //getgamesdata(gamesdata);
     QApplication a(argc, argv);
     MainWindow mainwindow(gamesdata);
     mainwindow.show();
 
     return a.exec();
-}
-
-void getgamesdata(QVector<DOSApplication>& data) {
-    QFile inputFile(gamedatalocation);
-    if(inputFile.open(QIODevice::ReadOnly)) {
-        QTextStream in(&inputFile);
-        while(!in.atEnd()) {
-            DOSApplication temp(in.readLine());
-            data.push_back(temp);
-        }
-        inputFile.close();
-    }
 }

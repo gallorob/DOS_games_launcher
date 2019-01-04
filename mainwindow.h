@@ -5,6 +5,8 @@
 #include <QModelIndex>
 #include <dosapplication.h>
 #include <addgamewindow.h>
+#include <dbmanager.h>
+#include <globalvars.h>
 
 namespace Ui {
 class MainWindow;
@@ -21,33 +23,53 @@ public:
 private slots:
     void on_play_button_clicked();
 
-    void on_add_game_button_clicked();
-
     void getNewGame(DOSApplication newgame);
+
+    void addGenres();
+
+    void addThemes();
+
+    void refreshGenresAndThemes();
 
     void on_games_list_itemSelectionChanged();
 
-    void on_extras_button_clicked();
+    void refreshGamesList();
 
-    void on_defaultdos_button_clicked();
+    void filterByGenre();
 
-    void on_manual_button_clicked();
+    void filterByTheme();
 
-    void refreshGamesList(bool hideCompleted = false);
+    void on_set_completed_clicked();
 
-    void dumpData();
+    void on_actionExit_triggered();
 
-    void sort_year();
-    void sort_title();
-    void sort_dev();
-    void sort_pub();
-    void sort_playtime();
+    void on_actionAdd_Game_triggered();
 
-    void on_hidecompleted_box_clicked();
+    void on_actionLaunch_normale_DOSBox_triggered();
 
-    void on_del_game_button_clicked();
+    void on_actionOpen_game_s_manual_triggered();
+
+    void on_actionBrowse_game_s_extras_triggered();
+
+    void on_actionTitle_triggered();
+
+    void on_actionYear_triggered();
+
+    void on_actionPublisher_triggered();
+
+    void on_actionDeveloper_triggered();
+
+    void on_actionPlay_time_triggered();
+
+    void on_actionHide_completed_games_triggered();
+
+    void on_actionDelete_Game_triggered();
 
 private:
+    QVector<DOSApplication> games;
+    QVector<DOSApplication*> displayed;
+
+    DBManager dbm = DBManager(dblocation);
     Ui::MainWindow *ui;
 };
 

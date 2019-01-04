@@ -1,5 +1,12 @@
 #include <globalvars.h>
 #include <QString>
+#include <QDir>
 
-QString gamedatalocation = "/home/pi/Documents/QT Projects/dos_games_launcher/DOS Games/list.dat";
-QString iconlocation = "/home/pi/Documents/QT Projects/dos_games_launcher/DOS Games/dosgamesicon.ico";
+QDir dir = QDir::current();
+
+QString dblocation = dir.relativeFilePath("./dosgames.db");
+QString gamedatalocation = dir.relativeFilePath("./list.dat");
+QString iconlocation = dir.relativeFilePath("./dosgamesicon.ico");
+
+QStringList genres = QStringList();
+QStringList themes = QStringList();

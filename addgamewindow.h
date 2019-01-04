@@ -38,6 +38,7 @@ private slots:
     void on_create_config_button_clicked();
 
 private:
+    DOSApplication newgame;
     Ui::AddGameWindow *ui;
 };
 

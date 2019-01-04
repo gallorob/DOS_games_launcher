@@ -1,28 +1,33 @@
 #ifndef DOSAPPLICATION_H
 #define DOSAPPLICATION_H
 #include <QString>
+#include <QStringList>
 
 
 class DOSApplication {
 public:
     DOSApplication();
-    DOSApplication(QString title, int year, QString developer, QString publisher, QString genre, QString manual, QString boxart, QString conf, QString extras);
-    DOSApplication(QString line);
+    DOSApplication(QString title, int year, QString developer, QString publisher, QStringList genres, QString manual, QString boxart, QStringList themes, QString conf, QString extras);
     QString title = "Application title";
     int year = 0;
     QString developer = "Application developer";
     QString publisher = "Application publisher";
-    QString genre = "Application genre"; //todo: change to qstringlist
-    QString manual;
-    QString boxart;
+    QStringList genres = {"Application", "genres"};
+    QString manual = "";
+    QString boxart = "";
+    QString captures = "";
+    QStringList themes = {"Application", "themes"};
     QString conf = "/home/pi/DOS Games/default.conf";
     int playtime= 0;
-    bool completed;
+    bool completed = false;
     QString extras = "";
 
     QString gettime() const;
+    QString getGenres() const;
+    QString getThemes() const;
     void updateplaytime(int time);
-    QString printable();
+    bool hasTheme(QString theme) const;
+    bool hasGenre(QString genre) const;
 };
 
 #endif // DOSAPPLICATION_H

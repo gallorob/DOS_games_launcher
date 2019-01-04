@@ -2,15 +2,24 @@
 
 A DOSBox front-end to manage games (and software, eventually) written in C++.
 
-The csv file follows this structure:
-
-  "Title";"Year";"Developer";"Publisher";"Genre";"Manual location";"Boxart location";"Config file location";"Playtime";"Completed";"Extras location"
+The DB file follows the structure in DBCreation.sql
   
   
-Current version screenshot:
+Current version screenshot (GNOME 3 Adawaita default):
 
-![screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/dosgamesmanagerv01a.jpg)
 
-![screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/addgamewindow_v02.jpg)
+Main window:
 
-![screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/configfilecreator_v02.jpg)
+![screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/mainwindow.png)
+
+Add game window:
+
+![screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/addgamewindow.png)
+
+Config file creator:
+
+![screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/configfilecreator.png)
+
+Suggested folder structure:
+
+![Screenshot](https://github.com/gallorob/DOS_games_launcher/blob/master/pictures/folderstructure.png)

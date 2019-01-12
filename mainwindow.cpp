@@ -15,6 +15,7 @@
 #include <QUrl>
 #include <chrono>
 #include <QMenu>
+#include <QDebug>
 
 #define COMPARATOR(code) [](auto && left, auto && right) -> bool {return code;}
 
@@ -134,6 +135,7 @@ void MainWindow::on_games_list_itemSelectionChanged() {
 }
 
 void MainWindow::refreshGamesList() {
+    //ui->games_list->clearSelection();
     ui->games_list->clear();
     displayed.clear();
 
@@ -151,7 +153,7 @@ void MainWindow::refreshGamesList() {
         ui->games_list->addItem(game->title);
     }
     // set first element as default
-    ui->games_list->setCurrentRow(0);
+    if (displayed.size() > 0) ui->games_list->setCurrentRow(0);
 }
 
 void MainWindow::filterByGenre() {
@@ -242,10 +244,14 @@ void MainWindow::on_actionHide_completed_games_triggered() {
 }
 
 void MainWindow::on_actionDelete_Game_triggered() {
-    DOSApplication toRemove = games.at(ui->games_list->currentIndex().row());
-    this->dbm.remDosApplication(toRemove);
-    games.remove(ui->games_list->currentIndex().row());
-
+    // have to save it before removing game, otherwise games_list refresh throws "list index out of range"
+    int selectedRow = ui->games_list->currentIndex().row();
+    ui->games_list->clearSelection();
+    ui->games_list->clear();
+    // remove db entry first and then local instance
+    this->dbm.remDosApplication(*(displayed.at(selectedRow)));
+    games.remove(games.indexOf(*(displayed.at(selectedRow))));
+    // deleting a game causes current filters to be reset
     refreshGenresAndThemes();
     addGenres();
     addThemes();

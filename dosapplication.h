@@ -28,6 +28,8 @@ public:
     void updateplaytime(int time);
     bool hasTheme(QString theme) const;
     bool hasGenre(QString genre) const;
+
+    bool operator == (const DOSApplication &other);
 };
 
 #endif // DOSAPPLICATION_H

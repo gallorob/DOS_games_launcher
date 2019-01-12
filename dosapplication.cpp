@@ -73,3 +73,7 @@ bool DOSApplication::hasGenre(QString genre) const {
     }
     return false;
 }
+
+bool DOSApplication::operator == (const DOSApplication &other) {
+   return (strcmp(this->title.toStdString().c_str(), other.title.toStdString().c_str()) == 0);
+}

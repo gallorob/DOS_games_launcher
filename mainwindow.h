@@ -39,6 +39,8 @@ private slots:
 
     void filterByTheme();
 
+    void filterBySearchTerm();
+
     void on_set_completed_clicked();
 
     void on_actionExit_triggered();
@@ -64,6 +66,8 @@ private slots:
     void on_actionHide_completed_games_triggered();
 
     void on_actionDelete_Game_triggered();
+
+    void on_titleSearch_textEdited(const QString &arg1);
 
 private:
     QVector<DOSApplication> games;

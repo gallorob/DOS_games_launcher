@@ -23,9 +23,9 @@
     <property name="geometry">
      <rect>
       <x>480</x>
-      <y>10</y>
-      <width>280</width>
-      <height>370</height>
+      <y>60</y>
+      <width>220</width>
+      <height>320</height>
      </rect>
     </property>
     <property name="text">
@@ -35,8 +35,8 @@
    <widget class="QPushButton" name="play_button">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>410</y>
+      <x>540</x>
+      <y>450</y>
       <width>211</width>
       <height>61</height>
      </rect>
@@ -49,9 +49,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
+      <y>59</y>
       <width>380</width>
-      <height>370</height>
+      <height>321</height>
      </rect>
     </property>
    </widget>
@@ -162,14 +162,27 @@
    <widget class="QPushButton" name="set_completed">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>480</y>
-      <width>131</width>
-      <height>31</height>
+      <x>270</x>
+      <y>30</y>
+      <width>130</width>
+      <height>25</height>
      </rect>
     </property>
     <property name="text">
      <string>Set Completed</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="titleSearch">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>240</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Search game by title...</string>
     </property>
    </widget>
   </widget>

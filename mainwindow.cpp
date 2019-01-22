@@ -135,7 +135,6 @@ void MainWindow::on_games_list_itemSelectionChanged() {
 }
 
 void MainWindow::refreshGamesList() {
-    //ui->games_list->clearSelection();
     ui->games_list->clear();
     displayed.clear();
 
@@ -148,6 +147,7 @@ void MainWindow::refreshGamesList() {
     // apply filters
     filterByGenre();
     filterByTheme();
+    filterBySearchTerm();
     // add to games_list
     for(DOSApplication* game : displayed) {
         ui->games_list->addItem(game->title);
@@ -169,9 +169,18 @@ void MainWindow::filterByGenre() {
 void MainWindow::filterByTheme() {
     for (QAction* act : ui->menuFilter_by_theme->actions()) {
         if (act->isChecked()) {
-            for(int i = displayed.size() - 1; i > -1; i--) {
+            for (int i = displayed.size() - 1; i > -1; i--) {
                 if (!displayed.at(i)->hasTheme(act->text())) displayed.remove(i);
             }
+        }
+    }
+}
+
+void MainWindow::filterBySearchTerm() {
+    QString searchTerm = this->ui->titleSearch->text().toLower();
+    if (searchTerm.size() > 0) {
+        for (int i = displayed.size() - 1; i > -1; i--) {
+            if (! displayed.at(i)->title.toLower().contains(searchTerm)) displayed.remove(i);
         }
     }
 }
@@ -255,5 +264,11 @@ void MainWindow::on_actionDelete_Game_triggered() {
     refreshGenresAndThemes();
     addGenres();
     addThemes();
+    refreshGamesList();
+}
+
+
+void MainWindow::on_titleSearch_textEdited(const QString &arg1) {
+    // arg1 is unnecessary right now
     refreshGamesList();
 }
